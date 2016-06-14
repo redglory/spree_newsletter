@@ -1,0 +1,5 @@
+<% if can? :admin, Spree::Newsletter %>
+  <ul class="nav nav-sidebar">
+		<%= tab Spree::Newsletter, url: spree.admin_newsletters_path, icon: 'envelope', label: plural_resource_name(Spree::Newsletter) %>
+  </ul>
+<% end %>
