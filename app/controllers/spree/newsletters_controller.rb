@@ -8,7 +8,7 @@ module Spree
 			@newsletter = Spree::Newsletter.new(newsletter_params)
 			if @newsletter.save
 				respond_with(@newsletter) do |format| 
-					format.json { render json: {"status":"ok","msj":"Se ha suscrito al nuestro Newsletter con éxito!"} }
+					format.json { render json: {"status":"ok","msj":"#{Spree.t(:newsletter_ok)}"} }
 				end
     	else
 				respond_with(@newsletter) do |format| 
