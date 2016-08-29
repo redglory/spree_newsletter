@@ -1,4 +1,5 @@
 es:
-  newsletter_placeholder: "Ingrese su E-mail"
-  newsletter_ok: "Se ha suscrito a nuestro Newsletter con éxito!"
-  suscribe: "Suscribirme"
+  spree:
+    newsletter_placeholder: "Ingrese su E-mail"
+    newsletter_ok: "Se ha suscrito a nuestro Newsletter con éxito!"
+    suscribe: "Suscribirme"
