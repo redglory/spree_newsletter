@@ -1,13 +1,13 @@
-<%= form_for Spree::Newsletter.new, :html => { :id => form_id } do |f| %>
-	<div class="<%= div %>">
-		<%= f.text_field :email, :class => input, :placeholder => I18n.t(:newsletter_placeholder) %> 
-		
-		<button type="button" class="<%= button %>" onclick="submitNewsletter('#<%= form_id %>')">
-			<% if button_name == '' %>
-				<%= I18n.t(:suscribe) %>
-			<% else %>
-				<%= button_name %> 
-			<% end %>
-		</button>
-	</div>
+<%= form_for Spree::Newsletter.new, :html => { :id => form_id, :onsubmit => "return submitNewsletter('##{form_id}');" } do |f| %>
+  <div class="<%= div %>">
+    <%= f.text_field :email, :class => input, :placeholder => I18n.t(:newsletter_placeholder) %> 
+
+    <button type="button" class="<%= button %>" onclick="submitNewsletter('#<%= form_id %>')">
+      <% if button_name == '' %>
+        <%= I18n.t(:suscribe) %>
+      <% else %>
+        <%= button_name %> 
+      <% end %>
+    </button>
+  </div>
 <% end %>
