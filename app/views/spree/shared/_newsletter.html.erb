@@ -1,4 +1,4 @@
-<%= form_for Spree::Newsletter.new, :html => { :id => form_id, :onsubmit => "return submitNewsletter('##{form_id}');" } do |f| %>
+<%= form_for Spree::Newsletter.new, :html => { :id => form_id, :onsubmit => "submitNewsletter(event, '##{form_id}');" } do |f| %>
   <div class="<%= div %>">
     <%= f.text_field :email, :class => input, :placeholder => I18n.t(:newsletter_placeholder) %> 
 
