@@ -2,7 +2,7 @@
   <div class="<%= div %>">
     <%= f.text_field :email, :class => input, :placeholder => I18n.t(:newsletter_placeholder) %> 
 
-    <button type="button" class="<%= button %>" onclick="submitNewsletter('#<%= form_id %>')">
+    <button type="submit" class="<%= button %>">
       <% if button_name == '' %>
         <%= I18n.t(:suscribe) %>
       <% else %>
