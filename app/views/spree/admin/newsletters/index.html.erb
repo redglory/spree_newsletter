@@ -2,6 +2,10 @@
 	<%= plural_resource_name(Spree::Newsletter) %>
 <% end %>
 
+<% content_for :page_actions do %>
+  <%= button_link_to 'Exportar', admin_newsletters_path(format: :csv), :id=>"btn-export", :class=>"btn-primary" %>
+<% end %>
+
 <% if @newsletters.any? %>
 		<table class="table sortable" id="listing_newsletters" data-hook>
 		<thead>
