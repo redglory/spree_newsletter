@@ -1,5 +1,5 @@
 <% content_for :page_title do %>
-	<%= plural_resource_name(Spree::Newsletter) %>
+  <%= Spree.t(:newsletters) %>
 <% end %>
 
 <% content_for :page_actions do %>
@@ -7,27 +7,25 @@
 <% end %>
 
 <% if @newsletters.any? %>
-		<table class="table sortable" id="listing_newsletters" data-hook>
-		<thead>
-			<tr data-hook="option_header">
-				<th><%= Spree.t(:email) %></th>
-			</tr>
-		</thead>
-		<tbody>
-			<% @newsletters.each do |newsletter| %>
-				<tr class="spree_newsletter <%= cycle('odd', 'even')%>" id="<%= spree_dom_id newsletter %>" data-hook="option_row">
-					<td><%= newsletter.email %></td>
-					<td class="actions actions-2 text-right">
-						<%= link_to_delete(newsletter, no_text: true) %>
-					</td>
-				</tr>
-			<% end %>
-		</tbody>
-	</table>
+  <table class="table sortable" id="listing_newsletters" data-hook>
+    <thead>
+      <tr data-hook="option_header">
+        <th><%= Spree.t(:email) %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @newsletters.each do |newsletter| %>
+        <tr class="spree_newsletter <%= cycle('odd', 'even')%>" id="<%= spree_dom_id newsletter %>" data-hook="option_row">
+          <td><%= newsletter.email %></td>
+          <td class="actions actions-2 text-right">
+            <%= link_to_delete(newsletter, no_text: true) %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 <% else %>
   <div class="alert alert-info no-objects-found">
-		<%= Spree.t(:no_resource_found, resource: plural_resource_name(Spree::Newsletter)) %>,
+    <%= Spree.t(:no_resource_found, resource: Spree.t(:newsletters)) %>,
   </div>
 <% end %>
-
-
