@@ -1,0 +1,5 @@
+pt:
+  spree:
+    newsletter_placeholder: "Introduza o seu E-mail"
+    newsletter_ok: "Subscreveu a nossa Newsletter com sucesso!"
+    suscribe: "Subscrever"
